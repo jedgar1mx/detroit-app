@@ -111,7 +111,7 @@ function Geocoder() {
 
   return (
     <TextInput
-    style={{height: 40}}
+    style={{height: 40, color: '#fff'}}
     placeholder="Enter address."
     onChangeText={address => setAddress(address)}
     autoComplete='street-address'

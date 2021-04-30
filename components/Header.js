@@ -6,7 +6,7 @@ export default function Header() {
     <View style={styles.container}>
         <Image
           source={{
-            uri: 'https://detroitmi.gov/themes/custom/detroitmi/logo.png',
+            uri: 'https://detroitmi.gov/themes/custom/detroitmi/logo-white.png',
           }}
           style={styles.logo}
         />
@@ -20,13 +20,11 @@ export default function Header() {
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    backgroundColor: '#004445',
     justifyContent: 'flex-start',
   },
   logo:{
     width: 55, 
-    height: 70 , 
-    backgroundColor: '#fff'
+    height: 70
   },
   title: {
     flex: 1,

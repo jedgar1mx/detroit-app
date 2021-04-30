@@ -3,12 +3,16 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 import Header from './components/Header';
 import Geocoder from './components/Geocoder';
+import StartScreen from './components/StartScreen';
 
 export default function App() {
+  const [firstUse, setFirstUse] = useState(true);
+
   return (
     <View style={styles.container}>
-      <Header></Header>
-      <Geocoder></Geocoder>
+      {(firstUse) ? <StartScreen 
+      state={{ firstUse: [firstUse, setFirstUse] }}
+      ></StartScreen> : <Header></Header>}
       <StatusBar style="auto" />
     </View>
   );
@@ -16,9 +20,8 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#000',
+    width: '100%',
+    height: '100%'
   },
 });
